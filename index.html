@@ -1,0 +1,3197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sally Head Spa | Head Spa in Katy, TX</title>
+  <meta
+    name="description"
+    content="Sally Head Spa in Katy, Texas. Relaxation and deluxe head spa experiences with hair washing, scalp care, massage, facial care, and more. Call or text +1 832-994-7999."
+  />
+  <meta name="theme-color" content="#10291f" />
+
+  <!-- Elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =========================================================
+       SALLY HEAD SPA
+       Luxury responsive single-page website
+       ========================================================= */
+
+    :root {
+      --ink: #11251d;
+      --ink-2: #173328;
+      --forest: #193c2f;
+      --forest-light: #2b5a48;
+      --ivory: #f7f3ea;
+      --cream: #eee6d7;
+      --paper: #fcfaf5;
+      --champagne: #c8a66a;
+      --champagne-light: #e4cf9e;
+      --brown: #6f5d47;
+      --muted: #7d7a70;
+      --white: #ffffff;
+      --line: rgba(21, 49, 38, 0.13);
+      --shadow: 0 24px 70px rgba(20, 39, 31, 0.12);
+      --shadow-soft: 0 14px 40px rgba(20, 39, 31, 0.08);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1240px;
+      --header-height: 78px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Manrope", sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      position: relative;
+    }
+
+    ::selection {
+      background: var(--champagne);
+      color: var(--ink);
+    }
+
+    .container {
+      width: min(calc(100% - 44px), var(--max));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: clamp(82px, 10vw, 150px) 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--champagne);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .display-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      font-size: clamp(3rem, 6vw, 6.1rem);
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.025em;
+    }
+
+    .section-copy {
+      max-width: 680px;
+      color: #6d716b;
+      font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+    }
+
+    .gold-line {
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--champagne), transparent);
+      margin: 25px 0;
+    }
+
+    .btn {
+      min-height: 54px;
+      padding: 0 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #15261f;
+      background: linear-gradient(135deg, #e2c687, #c9a568);
+      box-shadow: 0 12px 30px rgba(200, 166, 106, 0.22);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 38px rgba(200, 166, 106, 0.35);
+    }
+
+    .btn-outline-light {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.13);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--forest-light);
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    /* ===================== NAVIGATION ===================== */
+
+    .site-header {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        backdrop-filter 0.4s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(13, 35, 27, 0.93);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      width: min(calc(100% - 42px), 1400px);
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .brand {
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 1002;
+    }
+
+    .brand-mark {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      border: 1px solid rgba(222, 194, 132, 0.76);
+      display: grid;
+      place-items: center;
+      color: var(--champagne-light);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.48rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-copy small {
+      display: block;
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(255, 255, 255, 0.62);
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2vw, 30px);
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .nav-links > a:not(.nav-call) {
+      font-size: 0.76rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      position: relative;
+      padding: 10px 0;
+    }
+
+    .nav-links > a:not(.nav-call)::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background: var(--champagne);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links > a:not(.nav-call):hover::after {
+      width: 100%;
+    }
+
+    .nav-call {
+      padding: 10px 17px;
+      border: 1px solid rgba(226, 198, 135, 0.6);
+      border-radius: 999px;
+      color: var(--champagne-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: 0.3s ease;
+    }
+
+    .nav-call:hover {
+      background: var(--champagne);
+      color: var(--ink);
+    }
+
+    .menu-toggle {
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      border-radius: 50%;
+      display: none;
+      place-items: center;
+      position: relative;
+      z-index: 1002;
+    }
+
+    .menu-toggle span {
+      width: 19px;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    .menu-toggle span + span {
+      margin-top: 5px;
+    }
+
+    .menu-toggle.active span:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+
+    /* ===================== HERO ===================== */
+
+    .hero {
+      min-height: 100svh;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #14281f;
+    }
+
+    .hero-slides,
+    .hero-slide,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slide {
+      opacity: 0;
+      background-position: center;
+      background-size: cover;
+      transform: scale(1.045);
+      transition:
+        opacity 1.7s ease,
+        transform 7s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-slide:nth-child(1) {
+      background-image: url("https://images.pexels.com/photos/23349902/pexels-photo-23349902.jpeg?auto=compress&cs=tinysrgb&w=2000");
+    }
+
+    .hero-slide:nth-child(2) {
+      background-image: url("https://images.pexels.com/photos/23349908/pexels-photo-23349908.jpeg?auto=compress&cs=tinysrgb&w=2000");
+    }
+
+    .hero-slide:nth-child(3) {
+      background-image: url("https://images.pexels.com/photos/7755447/pexels-photo-7755447.jpeg?auto=compress&cs=tinysrgb&w=2000");
+    }
+
+    .hero-slide:nth-child(4) {
+      background-image: url("https://images.pexels.com/photos/23349910/pexels-photo-23349910.jpeg?auto=compress&cs=tinysrgb&w=2000");
+    }
+
+    .hero-overlay {
+      background:
+        radial-gradient(circle at 70% 30%, rgba(211, 177, 105, 0.12), transparent 36%),
+        linear-gradient(90deg, rgba(8, 24, 18, 0.92) 0%, rgba(8, 24, 18, 0.65) 46%, rgba(8, 24, 18, 0.25) 100%),
+        linear-gradient(0deg, rgba(4, 15, 11, 0.72), transparent 46%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      width: min(calc(100% - 44px), var(--max));
+      margin-inline: auto;
+      padding-top: 145px;
+      padding-bottom: clamp(62px, 9vw, 112px);
+    }
+
+    .hero-copy {
+      max-width: 770px;
+    }
+
+    .hero .eyebrow {
+      color: #e8d19f;
+    }
+
+    .hero h1 {
+      max-width: 740px;
+      text-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-lead {
+      max-width: 650px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      margin-top: 27px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .hero-trust {
+      margin-top: clamp(45px, 6vw, 72px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      max-width: 850px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 24px;
+    }
+
+    .trust-item {
+      padding-right: 20px;
+    }
+
+    .trust-item + .trust-item {
+      padding-left: 20px;
+      border-left: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .trust-item strong {
+      font-family: "Cormorant Garamond", serif;
+      display: block;
+      color: #f0d59b;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    .trust-item span {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.76rem;
+    }
+
+    .hero-dots {
+      position: absolute;
+      right: clamp(25px, 5vw, 80px);
+      bottom: 60px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+    }
+
+    .hero-dot {
+      width: 28px;
+      height: 2px;
+      border: 0;
+      background: rgba(255, 255, 255, 0.35);
+      transition: 0.3s ease;
+    }
+
+    .hero-dot.active {
+      width: 54px;
+      background: var(--champagne-light);
+    }
+
+    /* ===================== INTRO STRIP ===================== */
+
+    .intro-strip {
+      background: var(--ink);
+      color: white;
+      padding: 23px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .intro-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .intro-stat {
+      text-align: center;
+      padding: 2px 20px;
+    }
+
+    .intro-stat + .intro-stat {
+      border-left: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .intro-stat strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      color: #e3c689;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .intro-stat span {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.58);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* ===================== ABOUT ===================== */
+
+    .about {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(200, 166, 106, 0.12), transparent 25%),
+        var(--paper);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(45px, 8vw, 110px);
+      align-items: center;
+    }
+
+    .about-collage {
+      min-height: 650px;
+      position: relative;
+    }
+
+    .about-image-main {
+      position: absolute;
+      inset: 0 16% 8% 0;
+      border-radius: 240px 240px 34px 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #d8d1c2;
+    }
+
+    .about-image-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-image-small {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 47%;
+      height: 46%;
+      overflow: hidden;
+      border: 8px solid var(--paper);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      background: #d7d0c2;
+    }
+
+    .about-image-small img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .floating-seal {
+      position: absolute;
+      right: 4%;
+      top: 7%;
+      width: 118px;
+      aspect-ratio: 1;
+      background: var(--ink);
+      color: var(--champagne-light);
+      border: 1px solid rgba(225, 195, 132, 0.44);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.06rem;
+      line-height: 1.1;
+      z-index: 3;
+      box-shadow: 0 16px 35px rgba(14, 32, 24, 0.2);
+    }
+
+    .about-copy .section-copy {
+      margin-top: 26px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .about-feature {
+      padding: 24px 19px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.52);
+    }
+
+    .feature-number {
+      color: var(--champagne);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .about-feature h3 {
+      font-size: 0.85rem;
+      margin: 11px 0 6px;
+      color: var(--ink);
+    }
+
+    .about-feature p {
+      color: #7b7e78;
+      font-size: 0.76rem;
+      line-height: 1.55;
+    }
+
+    /* ===================== EXPERIENCE ===================== */
+
+    .experience {
+      color: white;
+      background: var(--ink);
+      overflow: hidden;
+    }
+
+    .experience::before {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      border: 1px solid rgba(213, 181, 114, 0.13);
+      top: -210px;
+      right: -90px;
+      box-shadow:
+        0 0 0 60px rgba(213, 181, 114, 0.025),
+        0 0 0 120px rgba(213, 181, 114, 0.018);
+    }
+
+    .experience-head {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 65px;
+    }
+
+    .experience .section-copy {
+      color: rgba(255, 255, 255, 0.57);
+    }
+
+    .ritual-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .ritual {
+      position: relative;
+      padding: 45px 30px 48px;
+      min-height: 290px;
+      overflow: hidden;
+    }
+
+    .ritual + .ritual {
+      border-left: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .ritual-index {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--champagne);
+      font-size: 2rem;
+    }
+
+    .ritual h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      font-size: 1.75rem;
+      margin: 40px 0 15px;
+    }
+
+    .ritual p {
+      color: rgba(255, 255, 255, 0.53);
+      font-size: 0.86rem;
+      line-height: 1.75;
+    }
+
+    .ritual::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(205, 171, 101, 0.14), transparent 70%);
+      right: -20px;
+      bottom: -20px;
+    }
+
+    /* ===================== SERVICES ===================== */
+
+    .services {
+      background: #f1ebdf;
+      overflow: hidden;
+    }
+
+    .services-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 55px;
+    }
+
+    .services-head .section-copy {
+      max-width: 520px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--paper);
+      border: 1px solid rgba(27, 55, 43, 0.09);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-carousel {
+      position: relative;
+      height: clamp(300px, 34vw, 430px);
+      overflow: hidden;
+      background: #d8d1c4;
+    }
+
+    .service-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.03);
+      transition:
+        opacity 0.9s ease,
+        transform 5.8s ease;
+    }
+
+    .service-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(12, 31, 23, 0.37), transparent 45%);
+      pointer-events: none;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 4;
+    }
+
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: rgba(15, 37, 28, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 50%;
+      backdrop-filter: blur(12px);
+      transition: 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(15, 37, 28, 0.8);
+    }
+
+    .carousel-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      transition: 0.3s ease;
+    }
+
+    .carousel-dot.active {
+      background: #f0d9a5;
+      transform: scale(1.3);
+    }
+
+    .service-body {
+      padding: clamp(27px, 4vw, 42px);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .service-topline {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .service-duration {
+      font-size: 0.68rem;
+      color: var(--champagne);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .service-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .service-price {
+      flex: 0 0 auto;
+      text-align: right;
+    }
+
+    .service-price strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .service-price span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      margin-top: 5px;
+    }
+
+    .service-intro {
+      color: #74766f;
+      margin-top: 22px;
+      font-size: 0.9rem;
+    }
+
+    .service-list {
+      list-style: none;
+      margin: 27px 0 28px;
+      display: grid;
+      gap: 11px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: #465149;
+      font-size: 0.87rem;
+      line-height: 1.55;
+    }
+
+    .service-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      flex: 0 0 auto;
+      border: 1px solid var(--champagne);
+      border-radius: 50%;
+      margin-top: 8px;
+    }
+
+    .service-group {
+      margin-top: 25px;
+    }
+
+    .service-group + .service-group {
+      margin-top: 20px;
+    }
+
+    .service-group-title {
+      color: var(--forest);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .service-group .service-list {
+      margin: 0;
+    }
+
+    .service-card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-card-actions .btn {
+      flex: 1 1 160px;
+    }
+
+    .service-note {
+      text-align: center;
+      margin-top: 30px;
+      color: #818279;
+      font-size: 0.8rem;
+    }
+
+    /* ===================== ATMOSPHERE GALLERY ===================== */
+
+    .gallery {
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    .gallery-head {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr 0.9fr;
+      grid-template-rows: 330px 260px;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #d5cdc0;
+      isolation: isolate;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.045);
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(13, 32, 24, 0.32), transparent 50%);
+      pointer-events: none;
+    }
+
+    .gallery-label {
+      position: absolute;
+      z-index: 2;
+      left: 20px;
+      bottom: 17px;
+      color: white;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+    }
+
+    /* ===================== CALL / TEXT CTA ===================== */
+
+    .contact-cta {
+      padding: clamp(88px, 11vw, 145px) 0;
+      background:
+        linear-gradient(90deg, rgba(11, 29, 22, 0.91), rgba(11, 29, 22, 0.68)),
+        url("https://images.pexels.com/photos/23349902/pexels-photo-23349902.jpeg?auto=compress&cs=tinysrgb&w=2000")
+        center / cover fixed;
+      color: white;
+    }
+
+    .contact-cta-inner {
+      max-width: 760px;
+    }
+
+    .contact-cta .section-title {
+      font-size: clamp(3rem, 6vw, 5.7rem);
+    }
+
+    .contact-cta p {
+      color: rgba(255, 255, 255, 0.68);
+      margin-top: 23px;
+      max-width: 620px;
+    }
+
+    .contact-cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    /* ===================== REVIEWS ===================== */
+
+    .reviews {
+      background: #efe7d9;
+      overflow: hidden;
+    }
+
+    .reviews-head {
+      max-width: 710px;
+      margin-bottom: 45px;
+    }
+
+    .reviews-disclaimer {
+      margin-top: 18px;
+      color: #8c897f;
+      font-size: 0.74rem;
+    }
+
+    .review-row {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      margin-bottom: 16px;
+      will-change: transform;
+    }
+
+    .review-row.row-left {
+      animation: reviewLeft 42s linear infinite;
+    }
+
+    .review-row.row-right {
+      animation: reviewRight 46s linear infinite;
+    }
+
+    .reviews-track:hover .review-row {
+      animation-play-state: paused;
+    }
+
+    .review-card {
+      width: min(370px, 82vw);
+      min-height: 190px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(25, 54, 42, 0.08);
+      padding: 27px;
+      box-shadow: 0 10px 32px rgba(18, 41, 31, 0.05);
+      flex: 0 0 auto;
+    }
+
+    .quote-mark {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3.6rem;
+      line-height: 0.6;
+      color: var(--champagne);
+      margin-bottom: 20px;
+    }
+
+    .review-card p {
+      color: #575e58;
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
+    .review-tag {
+      display: inline-flex;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: #9b8052;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.62rem;
+      font-weight: 700;
+    }
+
+    @keyframes reviewLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 8px)); }
+    }
+
+    @keyframes reviewRight {
+      from { transform: translateX(calc(-50% - 8px)); }
+      to { transform: translateX(0); }
+    }
+
+    /* ===================== FAQ ===================== */
+
+    .faq {
+      background: var(--paper);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: clamp(45px, 8vw, 110px);
+    }
+
+    .faq-intro {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      padding: 27px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: var(--ink);
+    }
+
+    .faq-question span:first-child {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+      font-weight: 500;
+    }
+
+    .faq-plus {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .faq-plus::before,
+    .faq-plus::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 1px;
+      background: var(--ink);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-plus::after {
+      transform: rotate(90deg);
+    }
+
+    .faq-question[aria-expanded="true"] .faq-plus::after {
+      transform: rotate(0);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.4s ease;
+    }
+
+    .faq-answer > div {
+      overflow: hidden;
+    }
+
+    .faq-answer p {
+      color: #73776f;
+      padding: 0 50px 25px 0;
+      font-size: 0.91rem;
+    }
+
+    .faq-item.open .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    /* ===================== LOCATION ===================== */
+
+    .location {
+      background: var(--ink);
+      color: white;
+      overflow: hidden;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .location-info {
+      padding: clamp(38px, 6vw, 70px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(203, 170, 101, 0.13), transparent 32%),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .location-info .section-title {
+      margin-bottom: 28px;
+    }
+
+    .location-detail {
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .location-detail small {
+      display: block;
+      text-transform: uppercase;
+      color: var(--champagne);
+      letter-spacing: 0.14em;
+      font-size: 0.63rem;
+      margin-bottom: 7px;
+    }
+
+    .location-detail p,
+    .location-detail a {
+      color: rgba(255, 255, 255, 0.77);
+      font-size: 0.96rem;
+    }
+
+    .location-detail a:hover {
+      color: var(--champagne-light);
+    }
+
+    .location-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .map-card {
+      min-height: 620px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #d9d3c8;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      border: 0;
+      filter: saturate(0.68) sepia(0.08) contrast(0.94);
+    }
+
+    /* ===================== FOOTER ===================== */
+
+    footer {
+      background: #091b14;
+      color: white;
+      padding: 68px 0 105px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 0.7fr 0.9fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .footer-brand h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.3rem;
+      font-weight: 500;
+      color: var(--champagne-light);
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.48);
+      max-width: 420px;
+      margin-top: 13px;
+      font-size: 0.85rem;
+    }
+
+    .footer-column h3 {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--champagne);
+      margin-bottom: 17px;
+    }
+
+    .footer-column nav {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.82rem;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.36);
+      font-size: 0.68rem;
+    }
+
+    /* ===================== MOBILE CONTACT BAR ===================== */
+
+    .mobile-contact-bar {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding:
+        10px 12px
+        calc(10px + env(safe-area-inset-bottom));
+      gap: 9px;
+      background: rgba(9, 27, 20, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .mobile-contact-bar a {
+      flex: 1;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mobile-call {
+      background: var(--champagne);
+      color: var(--ink);
+    }
+
+    .mobile-text {
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: white;
+    }
+
+    .mobile-contact-bar svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    /* ===================== REVEAL ANIMATION ===================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+
+    @media (max-width: 1080px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links > a:not(.nav-call) {
+        font-size: 0.68rem;
+      }
+
+      .about-grid,
+      .faq-grid {
+        gap: 55px;
+      }
+
+      .ritual-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ritual:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+      }
+
+      .ritual:nth-child(4) {
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .menu-toggle {
+        display: grid;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(circle at 80% 15%, rgba(205, 171, 101, 0.14), transparent 28%),
+          #0d281e;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        transform: translateX(100%);
+        transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+        z-index: 1001;
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-links > a:not(.nav-call) {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2rem;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+      .nav-call {
+        margin-top: 10px;
+        padding: 14px 24px;
+      }
+
+      .hero-trust {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 560px;
+        gap: 0;
+      }
+
+      .trust-item:nth-child(3),
+      .trust-item:nth-child(4) {
+        margin-top: 20px;
+      }
+
+      .trust-item:nth-child(3) {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .about-grid,
+      .faq-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-collage {
+        min-height: 610px;
+      }
+
+      .about-copy {
+        max-width: 720px;
+      }
+
+      .experience-head {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-carousel {
+        height: min(66vw, 520px);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 360px 260px 260px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 1;
+        grid-column: span 2;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      .faq-intro {
+        position: static;
+      }
+
+      .map-card,
+      .map-card iframe {
+        min-height: 500px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+
+      .footer-brand {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .container,
+      .hero-content {
+        width: min(calc(100% - 30px), var(--max));
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .brand-copy strong {
+        font-size: 1.28rem;
+      }
+
+      .brand-copy small {
+        display: none;
+      }
+
+      .hero {
+        min-height: 820px;
+      }
+
+      .hero-content {
+        padding-top: 120px;
+        padding-bottom: 52px;
+      }
+
+      .display-title {
+        font-size: clamp(3.35rem, 17vw, 4.75rem);
+      }
+
+      .hero-lead {
+        font-size: 0.95rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-trust {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 38px;
+        padding-top: 19px;
+      }
+
+      .trust-item {
+        padding-right: 10px;
+      }
+
+      .trust-item + .trust-item {
+        padding-left: 10px;
+      }
+
+      .trust-item strong {
+        font-size: 1.13rem;
+      }
+
+      .trust-item span {
+        font-size: 0.66rem;
+      }
+
+      .hero-dots {
+        display: none;
+      }
+
+      .intro-strip {
+        padding: 18px 0;
+      }
+
+      .intro-stat {
+        padding: 2px 7px;
+      }
+
+      .intro-stat strong {
+        font-size: 1.25rem;
+      }
+
+      .intro-stat span {
+        font-size: 0.57rem;
+      }
+
+      .about-collage {
+        min-height: 465px;
+      }
+
+      .about-image-main {
+        right: 10%;
+      }
+
+      .about-image-small {
+        width: 48%;
+        height: 42%;
+      }
+
+      .floating-seal {
+        width: 90px;
+        font-size: 0.83rem;
+        right: 1%;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .ritual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ritual {
+        min-height: auto;
+        padding: 32px 5px;
+      }
+
+      .ritual + .ritual {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+      }
+
+      .ritual h3 {
+        margin-top: 25px;
+      }
+
+      .services-head {
+        display: block;
+      }
+
+      .services-head .section-copy {
+        margin-top: 22px;
+      }
+
+      .service-carousel {
+        height: 300px;
+      }
+
+      .service-topline {
+        display: block;
+      }
+
+      .service-price {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        text-align: left;
+        margin-top: 18px;
+      }
+
+      .service-price strong {
+        font-size: 2rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 280px);
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4) {
+        grid-column: auto;
+      }
+
+      .contact-cta {
+        background-attachment: scroll;
+      }
+
+      .contact-cta-actions .btn {
+        width: 100%;
+      }
+
+      .faq-answer p {
+        padding-right: 10px;
+      }
+
+      .location-info {
+        padding: 33px 24px;
+      }
+
+      .location-actions .btn {
+        width: 100%;
+      }
+
+      .map-card,
+      .map-card iframe {
+        min-height: 410px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom span {
+        display: block;
+        margin-bottom: 7px;
+      }
+
+      .mobile-contact-bar {
+        display: flex;
+      }
+
+      footer {
+        padding-bottom: 120px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .hero {
+        min-height: 790px;
+      }
+
+      .hero-trust {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item,
+      .trust-item + .trust-item {
+        border-left: 0;
+        padding: 8px 0;
+        margin-top: 0 !important;
+      }
+
+      .about-collage {
+        min-height: 415px;
+      }
+
+      .service-body {
+        padding: 25px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Sally Head Spa",
+    "telephone": "+1-832-994-7999",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "24551 Katy Fwy SPA 3",
+      "addressLocality": "Katy",
+      "addressRegion": "TX",
+      "postalCode": "77494",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#home" class="brand" aria-label="Sally Head Spa home">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>Sally Head Spa</strong>
+          <small>Katy · Texas</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-controls="navLinks"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-call" href="tel:+18329947999">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <section class="hero" id="home" aria-label="Sally Head Spa introduction">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Head Spa · Katy, Texas</span>
+
+          <h1 class="display-title">
+            Quiet care for your head, hair &amp; senses.
+          </h1>
+
+          <p class="hero-lead">
+            Step away from the rush and settle into a calming head spa experience
+            with gentle hair care, soothing massage and thoughtful details in a
+            relaxed setting.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+18329947999">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5.2 3.8 8 3.2l2.1 5-2 1.7c1.2 2.4 3 4.2 5.4 5.4l1.7-2 5 2.1-.6 2.8c-.3 1.4-1.5 2.4-3 2.4C9.3 20.6 3.4 14.7 3.4 7.4c0-1.5 1-2.7 1.8-3.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Call Now
+            </a>
+
+            <a class="btn btn-outline-light" href="sms:+18329947999">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 5.5h14v10H9l-4 3v-13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              </svg>
+              Text Us
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-trust reveal">
+          <div class="trust-item">
+            <strong>Quiet</strong>
+            <span>Relaxed atmosphere</span>
+          </div>
+          <div class="trust-item">
+            <strong>Thoughtful</strong>
+            <span>Comfort-focused care</span>
+          </div>
+          <div class="trust-item">
+            <strong>Refresh</strong>
+            <span>Hair wash &amp; steam</span>
+          </div>
+          <div class="trust-item">
+            <strong>Easy</strong>
+            <span>Call or text directly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dots" aria-label="Hero image controls">
+        <button class="hero-dot active" aria-label="Show image 1"></button>
+        <button class="hero-dot" aria-label="Show image 2"></button>
+        <button class="hero-dot" aria-label="Show image 3"></button>
+        <button class="hero-dot" aria-label="Show image 4"></button>
+      </div>
+    </section>
+
+    <!-- FACT STRIP -->
+    <div class="intro-strip" aria-label="Key information">
+      <div class="container intro-strip-inner">
+        <div class="intro-stat">
+          <strong>4</strong>
+          <span>Head Spa Options</span>
+        </div>
+        <div class="intro-stat">
+          <strong>60–120</strong>
+          <span>Minutes</span>
+        </div>
+        <div class="intro-stat">
+          <strong>10 AM–7 PM</strong>
+          <span>Business Hours</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-collage reveal">
+          <div class="about-image-main">
+            <img
+              src="https://images.pexels.com/photos/7755447/pexels-photo-7755447.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Relaxing hair wash and head spa experience"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-image-small">
+            <img
+              src="https://images.pexels.com/photos/23349910/pexels-photo-23349910.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Gentle hair wash in a calm salon setting"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="floating-seal">
+            Relax<br />Refresh<br />Rest
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">About Sally Head Spa</span>
+
+          <h2 class="section-title">
+            A softer pause in the middle of your day.
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-copy">
+            Sally Head Spa is a calm place to slow down, settle in and enjoy
+            dedicated head and hair care. The experience centers on comfort,
+            cleansing, gentle steam and relaxing massage in an environment
+            designed to feel peaceful and unhurried.
+          </p>
+
+          <p class="section-copy" style="margin-top:16px;">
+            Whether you choose a simple 60-minute experience or a longer deluxe
+            session, each option follows a clear, comfortable flow so you can
+            enjoy the moment without unnecessary distractions.
+          </p>
+
+          <div class="about-features">
+            <article class="about-feature">
+              <span class="feature-number">01</span>
+              <h3>Calm Atmosphere</h3>
+              <p>A quieter setting for switching off from a busy day.</p>
+            </article>
+
+            <article class="about-feature">
+              <span class="feature-number">02</span>
+              <h3>Thoughtful Details</h3>
+              <p>Comfort-focused steps designed around an easy spa experience.</p>
+            </article>
+
+            <article class="about-feature">
+              <span class="feature-number">03</span>
+              <h3>Simple Contact</h3>
+              <p>Call or text directly when you would like to check availability.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EXPERIENCE
+         ===================================================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="experience-head">
+          <div class="reveal">
+            <span class="eyebrow">The Experience</span>
+            <h2 class="section-title">
+              A calm rhythm from arrival to finish.
+            </h2>
+          </div>
+
+          <p class="section-copy reveal">
+            Head spa care is most enjoyable when the pace feels easy. Our service
+            menu combines hair cleansing, steam and massage with selected deluxe
+            details depending on the experience you choose.
+          </p>
+        </div>
+
+        <div class="ritual-grid reveal">
+          <article class="ritual">
+            <span class="ritual-index">01</span>
+            <h3>Calm Arrival</h3>
+            <p>
+              Leave the noise outside and transition into a slower, more restful
+              pace before your service begins.
+            </p>
+          </article>
+
+          <article class="ritual">
+            <span class="ritual-index">02</span>
+            <h3>Comfort First</h3>
+            <p>
+              Settle into an experience centered on relaxation while your selected
+              head spa steps are completed.
+            </p>
+          </article>
+
+          <article class="ritual">
+            <span class="ritual-index">03</span>
+            <h3>Mindful Details</h3>
+            <p>
+              Shampoo, steam, conditioner, masks and massage are included only as
+              specified in the head spa experience you select.
+            </p>
+          </article>
+
+          <article class="ritual">
+            <span class="ritual-index">04</span>
+            <h3>Restful Finish</h3>
+            <p>
+              Your hair is dried without styling, allowing the experience to end
+              simply and comfortably.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERVICES
+         Only the four services supplied by Sally Head Spa.
+         ===================================================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="services-head">
+          <div class="reveal">
+            <span class="eyebrow">Services &amp; Pricing</span>
+            <h2 class="section-title">Choose your head spa experience.</h2>
+          </div>
+
+          <p class="section-copy reveal">
+            Four clearly defined experiences, from focused relaxation to an
+            extended deluxe session with facial care and essential oil massage.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <!-- SERVICE 1 -->
+          <article class="service-card reveal">
+            <div class="service-carousel" data-interval="5200">
+              <div class="service-slide active">
+                <img
+                  src="https://images.pexels.com/photos/23349902/pexels-photo-23349902.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Head massage and hair wash"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.pexels.com/photos/23349908/pexels-photo-23349908.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Relaxing shampoo and scalp massage"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.pexels.com/photos/7755447/pexels-photo-7755447.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Relaxing head spa hair wash"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+
+                <div class="carousel-dots" aria-hidden="true"></div>
+
+                <button class="carousel-btn next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="service-body">
+              <div class="service-topline">
+                <div>
+                  <div class="service-duration">60 Minutes</div>
+                  <h3 class="service-name">Relaxation Head Spa</h3>
+                </div>
+
+                <div class="service-price">
+                  <strong>$79</strong>
+                  <span>60 mins</span>
+                </div>
+              </div>
+
+              <p class="service-intro">
+                A focused head spa option for guests who want hair cleansing,
+                gentle steam and relaxing head, neck and shoulder massage.
+              </p>
+
+              <ul class="service-list">
+                <li>Head, neck &amp; shoulder massage</li>
+                <li>Hair wash with shampoo</li>
+                <li>Hair steaming with conditioner</li>
+                <li>Hair drying without styling</li>
+              </ul>
+
+              <div class="service-card-actions">
+                <a class="btn btn-dark" href="tel:+18329947999">Call</a>
+                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 2 -->
+          <article class="service-card reveal">
+            <div class="service-carousel" data-interval="5600">
+              <div class="service-slide active">
+                <img
+                  src="https://images.pexels.com/photos/23349910/pexels-photo-23349910.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Hair washing and scalp care"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.pexels.com/photos/8834060/pexels-photo-8834060.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Relaxing hair wash experience"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.pexels.com/photos/23349908/pexels-photo-23349908.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Head spa shampoo massage"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+
+                <div class="carousel-dots" aria-hidden="true"></div>
+
+                <button class="carousel-btn next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="service-body">
+              <div class="service-topline">
+                <div>
+                  <div class="service-duration">60 Minutes</div>
+                  <h3 class="service-name">Deluxe Head Spa</h3>
+                </div>
+
+                <div class="service-price">
+                  <strong>$99</strong>
+                  <span>60 mins</span>
+                </div>
+              </div>
+
+              <p class="service-intro">
+                A more detailed 60-minute head spa experience with added arm
+                massage, eye comfort and a deep-hydrating hair mask.
+              </p>
+
+              <ul class="service-list">
+                <li>Head, neck, shoulder &amp; arm massage</li>
+                <li>Steam eye mask + hand mask</li>
+                <li>Hair wash with shampoo</li>
+                <li>Hair steaming with deep-hydrating hair mask</li>
+                <li>Hair drying without styling</li>
+              </ul>
+
+              <div class="service-card-actions">
+                <a class="btn btn-dark" href="tel:+18329947999">Call</a>
+                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 3 -->
+          <article class="service-card reveal">
+            <div class="service-carousel" data-interval="5400">
+              <div class="service-slide active">
+                <img
+                  src="https://images.pexels.com/photos/23349902/pexels-photo-23349902.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Head spa massage and hair wash"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg"
+                  alt="Facial massage"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg"
+                  alt="Relaxing facial care"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+
+                <div class="carousel-dots" aria-hidden="true"></div>
+
+                <button class="carousel-btn next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="service-body">
+              <div class="service-topline">
+                <div>
+                  <div class="service-duration">80 Minutes</div>
+                  <h3 class="service-name">Deluxe Head Spa</h3>
+                </div>
+
+                <div class="service-price">
+                  <strong>$119</strong>
+                  <span>80 mins</span>
+                </div>
+              </div>
+
+              <p class="service-intro">
+                An extended experience combining facial care with head, neck and
+                shoulder massage plus shampoo, steam and conditioner.
+              </p>
+
+              <div class="service-group">
+                <div class="service-group-title">Facial</div>
+                <ul class="service-list">
+                  <li>Face cleansing</li>
+                  <li>Facial massage with collagen facial massage cream</li>
+                  <li>Face mask</li>
+                  <li>Moisturizing lotion</li>
+                </ul>
+              </div>
+
+              <div class="service-group">
+                <div class="service-group-title">Massage &amp; Hair Care</div>
+                <ul class="service-list">
+                  <li>Head, neck &amp; shoulder massage</li>
+                  <li>Hair wash with shampoo</li>
+                  <li>Hair steaming with conditioner</li>
+                  <li>Hair drying without styling</li>
+                </ul>
+              </div>
+
+              <div class="service-card-actions">
+                <a class="btn btn-dark" href="tel:+18329947999">Call</a>
+                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVICE 4 -->
+          <article class="service-card reveal">
+            <div class="service-carousel" data-interval="5800">
+              <div class="service-slide active">
+                <img
+                  src="https://images.pexels.com/photos/23349908/pexels-photo-23349908.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Head spa shampoo and scalp massage"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/1200x/df/fe/bd/dffebdc4792665f4680cdfb0480fd95c.jpg"
+                  alt="Facial care"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-slide">
+                <img
+                  src="https://images.pexels.com/photos/6560272/pexels-photo-6560272.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  alt="Hot stone massage on the back"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+
+                <div class="carousel-dots" aria-hidden="true"></div>
+
+                <button class="carousel-btn next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="service-body">
+              <div class="service-topline">
+                <div>
+                  <div class="service-duration">120 Minutes</div>
+                  <h3 class="service-name">Deluxe Head Spa</h3>
+                </div>
+
+                <div class="service-price">
+                  <strong>$179</strong>
+                  <span>120 mins</span>
+                </div>
+              </div>
+
+              <p class="service-intro">
+                The longest experience on the menu, combining facial care, head
+                spa steps and the listed essential oil massage with hot stone.
+              </p>
+
+              <div class="service-group">
+                <div class="service-group-title">Facial</div>
+                <ul class="service-list">
+                  <li>Face cleansing</li>
+                  <li>Facial massage with collagen facial massage cream</li>
+                  <li>Face mask</li>
+                  <li>Moisturizing lotion</li>
+                </ul>
+              </div>
+
+              <div class="service-group">
+                <div class="service-group-title">Head Spa</div>
+                <ul class="service-list">
+                  <li>Hair wash + head massage</li>
+                  <li>Hair drying without styling</li>
+                </ul>
+              </div>
+
+              <div class="service-group">
+                <div class="service-group-title">Essential Oil Massage</div>
+                <ul class="service-list">
+                  <li>Back, shoulder &amp; arm essential oil massage</li>
+                  <li>Hot stone</li>
+                </ul>
+              </div>
+
+              <div class="service-card-actions">
+                <a class="btn btn-dark" href="tel:+18329947999">Call</a>
+                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="service-note">
+          Questions about a service? Call or text Sally Head Spa directly at
+          +1 832-994-7999.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GALLERY
+         ===================================================== -->
+    <section class="section gallery" aria-label="Head spa atmosphere">
+      <div class="container">
+        <div class="gallery-head reveal">
+          <span class="eyebrow">Atmosphere</span>
+          <h2 class="section-title">Unhurried. Comfortable. Restful.</h2>
+          <p class="section-copy" style="margin-top:22px;">
+            A visual glimpse into the calm rituals that shape the Sally Head Spa
+            experience.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal">
+            <img
+              src="https://images.pexels.com/photos/23349908/pexels-photo-23349908.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Hair wash and scalp massage"
+              loading="lazy"
+            />
+            <figcaption class="gallery-label">Slow down</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://images.pexels.com/photos/7755447/pexels-photo-7755447.jpeg?auto=compress&cs=tinysrgb&w=1000"
+              alt="Relaxing head spa hair wash"
+              loading="lazy"
+            />
+            <figcaption class="gallery-label">Refresh</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg"
+              alt="Facial care included in selected deluxe services"
+              loading="lazy"
+            />
+            <figcaption class="gallery-label">Restore</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://images.pexels.com/photos/6560302/pexels-photo-6560302.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Hot stone massage included in the 120-minute deluxe service"
+              loading="lazy"
+            />
+            <figcaption class="gallery-label">A longer pause</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         DIRECT CONTACT CTA
+         ===================================================== -->
+    <section class="contact-cta" aria-label="Call or text Sally Head Spa">
+      <div class="container">
+        <div class="contact-cta-inner reveal">
+          <span class="eyebrow">Sally Head Spa · Katy</span>
+
+          <h2 class="section-title">
+            Your quiet reset is only a call or text away.
+          </h2>
+
+          <p>
+            Want to check availability or ask which experience fits the amount
+            of time you have? Contact Sally Head Spa directly.
+          </p>
+
+          <div class="contact-cta-actions">
+            <a class="btn btn-primary" href="tel:+18329947999">
+              Call +1 832-994-7999
+            </a>
+
+            <a class="btn btn-outline-light" href="sms:+18329947999">
+              Send a Text
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         REVIEWS / EXPERIENCE COPY
+         Replace with verified customer reviews before publishing
+         if actual review text is available.
+         ===================================================== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="reviews-head reveal">
+          <span class="eyebrow">Guest Experience</span>
+          <h2 class="section-title">The kind of calm guests come for.</h2>
+          <p class="section-copy" style="margin-top:20px;">
+            Quiet surroundings, comfortable care and an easy way to step out of
+            the pace of the day.
+          </p>
+          <p class="reviews-disclaimer">
+            Sample review-style copy for layout. Replace with verified customer
+            reviews before public use.
+          </p>
+        </div>
+      </div>
+
+      <div class="reviews-track" aria-label="Sample experience comments">
+        <div class="review-row row-left">
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>The atmosphere felt calm from the moment I arrived, and the whole experience was easy to settle into.</p>
+            <span class="review-tag">Calm atmosphere</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>I loved being able to slow down for an hour and enjoy the head, neck and shoulder massage.</p>
+            <span class="review-tag">Relaxing visit</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>The hair wash and steam made the experience feel especially refreshing and unhurried.</p>
+            <span class="review-tag">Head spa care</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>Everything about the visit felt simple and comfortable, from getting settled to finishing the service.</p>
+            <span class="review-tag">Comfort</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>It was exactly the kind of quiet break I wanted after a long, busy week.</p>
+            <span class="review-tag">Quiet time</span>
+          </article>
+
+          <!-- duplicate set for seamless loop -->
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>The atmosphere felt calm from the moment I arrived, and the whole experience was easy to settle into.</p>
+            <span class="review-tag">Calm atmosphere</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>I loved being able to slow down for an hour and enjoy the head, neck and shoulder massage.</p>
+            <span class="review-tag">Relaxing visit</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>The hair wash and steam made the experience feel especially refreshing and unhurried.</p>
+            <span class="review-tag">Head spa care</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>Everything about the visit felt simple and comfortable, from getting settled to finishing the service.</p>
+            <span class="review-tag">Comfort</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>It was exactly the kind of quiet break I wanted after a long, busy week.</p>
+            <span class="review-tag">Quiet time</span>
+          </article>
+        </div>
+
+        <div class="review-row row-right">
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>The head spa felt like a real pause from the day. I appreciated how relaxed the pace was.</p>
+            <span class="review-tag">Easy pace</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>I enjoyed the combination of shampoo, steam and massage. It felt like dedicated time to simply unwind.</p>
+            <span class="review-tag">Refresh</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>The longer deluxe experience was a nice choice when I wanted more time to relax.</p>
+            <span class="review-tag">Deluxe experience</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>Calling ahead was easy, and I liked having a clear menu with the time and price shown upfront.</p>
+            <span class="review-tag">Easy contact</span>
+          </article>
+
+          <article class="review-card">
+            <div class="quote-mark">“</div>
+            <p>A peaceful experience with thoughtful details and a comfortable finish.</p>
+            <span class="review-tag">Thoughtful details</span>
+          </article>
+
+          <!-- duplicate set for seamless loop -->
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>The head spa felt like a real pause from the day. I appreciated how relaxed the pace was.</p>
+            <span class="review-tag">Easy pace</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>I enjoyed the combination of shampoo, steam and massage. It felt like dedicated time to simply unwind.</p>
+            <span class="review-tag">Refresh</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>The longer deluxe experience was a nice choice when I wanted more time to relax.</p>
+            <span class="review-tag">Deluxe experience</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>Calling ahead was easy, and I liked having a clear menu with the time and price shown upfront.</p>
+            <span class="review-tag">Easy contact</span>
+          </article>
+
+          <article class="review-card" aria-hidden="true">
+            <div class="quote-mark">“</div>
+            <p>A peaceful experience with thoughtful details and a comfortable finish.</p>
+            <span class="review-tag">Thoughtful details</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FAQ
+         ===================================================== -->
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Before you visit.</h2>
+
+          <p class="section-copy" style="margin-top:22px;">
+            For anything not covered here, call or text
+            <a href="tel:+18329947999" style="color:var(--forest); font-weight:700;">
+              +1 832-994-7999
+            </a>.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How early should I arrive?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq-answer">
+              <div>
+                <p>
+                  If you have arranged a visit by phone or text, arriving a few
+                  minutes early gives you time to get settled before your service.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I get a massage if I have an injury?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq-answer">
+              <div>
+                <p>
+                  Please call or text before visiting and mention any injury,
+                  recent procedure, scalp or skin concern, pregnancy, or other
+                  health consideration. If you are unsure whether massage is
+                  appropriate for you, check with a qualified medical professional
+                  before receiving massage.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is your cancellation policy?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq-answer">
+              <div>
+                <p>
+                  If you have arranged a visit by phone or text and your plans
+                  change, please contact Sally Head Spa as soon as possible.
+                  Call or text for current policy details.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there parking available?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq-answer">
+              <div>
+                <p>
+                  For the most current parking and arrival guidance at
+                  24551 Katy Fwy SPA 3, please call or text before your visit.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         LOCATION & CONTACT
+         ===================================================== -->
+    <section class="section location" id="contact">
+      <div class="container location-grid">
+
+        <div class="location-info reveal">
+          <span class="eyebrow">Visit Sally Head Spa</span>
+          <h2 class="section-title">Find your quiet moment in Katy.</h2>
+
+          <div class="location-detail">
+            <small>Address</small>
+            <p>
+              24551 Katy Fwy SPA 3<br />
+              Katy, TX 77494
+            </p>
+          </div>
+
+          <div class="location-detail">
+            <small>Phone</small>
+            <a href="tel:+18329947999">+1 832-994-7999</a>
+          </div>
+
+          <div class="location-detail">
+            <small>Hours</small>
+            <p>10:00 AM – 7:00 PM</p>
+          </div>
+
+          <div class="location-actions">
+            <a class="btn btn-primary" href="tel:+18329947999">
+              Call Now
+            </a>
+
+            <a class="btn btn-outline-light" href="sms:+18329947999">
+              Send Text
+            </a>
+
+            <a
+              class="btn btn-outline-light"
+              href="https://www.google.com/maps/dir/?api=1&destination=24551%20Katy%20Fwy%20SPA%203%2C%20Katy%2C%20TX%2077494"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Directions
+            </a>
+          </div>
+        </div>
+
+        <div class="map-card reveal">
+          <iframe
+            title="Map showing Sally Head Spa in Katy, Texas"
+            src="https://www.google.com/maps?q=24551%20Katy%20Fwy%20SPA%203%2C%20Katy%2C%20TX%2077494&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <h2>Sally Head Spa</h2>
+          <p>
+            A calm head spa experience in Katy, Texas — created for slowing down,
+            refreshing your hair and enjoying a quieter moment.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <nav aria-label="Footer navigation">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Location</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>24551 Katy Fwy SPA 3</p>
+          <p>Katy, TX 77494</p>
+          <p style="margin-top:10px;">
+            <a href="tel:+18329947999">+1 832-994-7999</a>
+          </p>
+          <p>10:00 AM – 7:00 PM</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Sally Head Spa. All rights reserved.</span>
+        <span>Katy, Texas</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE DIRECT CONTACT BAR -->
+  <div class="mobile-contact-bar" aria-label="Quick contact">
+    <a class="mobile-call" href="tel:+18329947999">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5.2 3.8 8 3.2l2.1 5-2 1.7c1.2 2.4 3 4.2 5.4 5.4l1.7-2 5 2.1-.6 2.8c-.3 1.4-1.5 2.4-3 2.4C9.3 20.6 3.4 14.7 3.4 7.4c0-1.5 1-2.7 1.8-3.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Call Now
+    </a>
+
+    <a class="mobile-text" href="sms:+18329947999">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 5.5h14v10H9l-4 3v-13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      </svg>
+      Text Us
+    </a>
+  </div>
+
+  <script>
+    /* =========================================================
+       SALLY HEAD SPA - INTERACTIONS
+       Native JavaScript only
+       ========================================================= */
+
+    (() => {
+      "use strict";
+
+      const prefersReducedMotion =
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      /* ---------------- Sticky header ---------------- */
+
+      const header = document.getElementById("siteHeader");
+
+      const updateHeader = () => {
+        header.classList.toggle("scrolled", window.scrollY > 35);
+      };
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      /* ---------------- Mobile navigation ---------------- */
+
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      function closeMenu() {
+        menuToggle.classList.remove("active");
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+
+      menuToggle.addEventListener("click", () => {
+        const opening = !navLinks.classList.contains("open");
+
+        menuToggle.classList.toggle("active", opening);
+        navLinks.classList.toggle("open", opening);
+        document.body.classList.toggle("menu-open", opening);
+
+        menuToggle.setAttribute("aria-expanded", String(opening));
+        menuToggle.setAttribute(
+          "aria-label",
+          opening ? "Close navigation" : "Open navigation"
+        );
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      /* ---------------- Hero background carousel ---------------- */
+
+      const heroSlides = [...document.querySelectorAll(".hero-slide")];
+      const heroDots = [...document.querySelectorAll(".hero-dot")];
+
+      let heroIndex = 0;
+      let heroTimer = null;
+
+      function showHeroSlide(index) {
+        heroSlides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+
+        heroDots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+
+        heroIndex = index;
+      }
+
+      function nextHero() {
+        showHeroSlide((heroIndex + 1) % heroSlides.length);
+      }
+
+      function startHeroTimer() {
+        if (prefersReducedMotion) return;
+
+        clearInterval(heroTimer);
+        heroTimer = setInterval(nextHero, 6200);
+      }
+
+      heroDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showHeroSlide(index);
+          startHeroTimer();
+        });
+      });
+
+      startHeroTimer();
+
+      /* ---------------- Service image carousels ---------------- */
+
+      document.querySelectorAll(".service-carousel").forEach((carousel) => {
+        const slides = [...carousel.querySelectorAll(".service-slide")];
+        const prev = carousel.querySelector(".prev");
+        const next = carousel.querySelector(".next");
+        const dotsWrap = carousel.querySelector(".carousel-dots");
+
+        if (slides.length <= 1) {
+          if (carousel.querySelector(".carousel-controls")) {
+            carousel.querySelector(".carousel-controls").style.display = "none";
+          }
+          return;
+        }
+
+        let index = 0;
+        let timer;
+        const interval = Number(carousel.dataset.interval || 5400);
+
+        const dots = slides.map((_, i) => {
+          const dot = document.createElement("button");
+          dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+          dot.type = "button";
+          dot.tabIndex = -1;
+          dotsWrap.appendChild(dot);
+          return dot;
+        });
+
+        function showSlide(newIndex) {
+          index = (newIndex + slides.length) % slides.length;
+
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+          });
+        }
+
+        function restart() {
+          if (prefersReducedMotion) return;
+
+          clearInterval(timer);
+          timer = setInterval(() => {
+            showSlide(index + 1);
+          }, interval);
+        }
+
+        prev.addEventListener("click", () => {
+          showSlide(index - 1);
+          restart();
+        });
+
+        next.addEventListener("click", () => {
+          showSlide(index + 1);
+          restart();
+        });
+
+        carousel.addEventListener("mouseenter", () => clearInterval(timer));
+        carousel.addEventListener("mouseleave", restart);
+
+        carousel.addEventListener("focusin", () => clearInterval(timer));
+        carousel.addEventListener("focusout", restart);
+
+        restart();
+      });
+
+      /* ---------------- FAQ accordion ---------------- */
+
+      const faqItems = [...document.querySelectorAll(".faq-item")];
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-question");
+
+        button.addEventListener("click", () => {
+          const isOpen = item.classList.contains("open");
+
+          faqItems.forEach((otherItem) => {
+            otherItem.classList.remove("open");
+            otherItem
+              .querySelector(".faq-question")
+              .setAttribute("aria-expanded", "false");
+          });
+
+          if (!isOpen) {
+            item.classList.add("open");
+            button.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      /* ---------------- Scroll reveal ---------------- */
+
+      const revealElements = [...document.querySelectorAll(".reveal")];
+
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((el) => el.classList.add("visible"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+          }
+        );
+
+        revealElements.forEach((el) => observer.observe(el));
+      }
+
+      /* ---------------- Current year ---------------- */
+
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
