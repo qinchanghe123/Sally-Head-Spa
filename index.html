@@ -1036,6 +1036,215 @@
       font-size: 0.8rem;
     }
 
+    /* ===================== BOOKING ===================== */
+
+    .booking {
+      background:
+        radial-gradient(circle at 8% 8%, rgba(200, 166, 106, 0.13), transparent 26%),
+        linear-gradient(180deg, #fbf8f1 0%, #f3ecdf 100%);
+      overflow: hidden;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: clamp(42px, 7vw, 92px);
+      align-items: start;
+    }
+
+    .booking-intro {
+      position: sticky;
+      top: 118px;
+    }
+
+    .booking-intro .section-copy {
+      margin-top: 24px;
+    }
+
+    .booking-note {
+      margin-top: 30px;
+      padding: 24px;
+      border: 1px solid rgba(25, 60, 47, 0.12);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.55);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .booking-note strong {
+      display: block;
+      color: var(--forest);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .booking-note p {
+      color: #72766f;
+      font-size: 0.84rem;
+      line-height: 1.7;
+    }
+
+    .booking-note p + p {
+      margin-top: 9px;
+    }
+
+    .booking-card {
+      padding: clamp(27px, 4vw, 46px);
+      border: 1px solid rgba(27, 55, 43, 0.1);
+      border-radius: 30px;
+      background: rgba(252, 250, 245, 0.96);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 19px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .form-field label,
+    .form-label {
+      color: var(--forest);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 52px;
+      border: 1px solid rgba(26, 55, 43, 0.17);
+      border-radius: 14px;
+      background: #fffdf8;
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .form-field input,
+    .form-field select {
+      padding: 0 15px;
+    }
+
+    .form-field textarea {
+      min-height: 112px;
+      padding: 14px 15px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: rgba(200, 166, 106, 0.9);
+      box-shadow: 0 0 0 4px rgba(200, 166, 106, 0.12);
+      background: white;
+    }
+
+    .form-field select:disabled {
+      color: #999b95;
+      background: #f3f0e8;
+      cursor: not-allowed;
+    }
+
+    .field-hint {
+      color: #8a8b84;
+      font-size: 0.72rem;
+      line-height: 1.5;
+    }
+
+    .booking-summary {
+      margin-top: 4px;
+      padding: 19px 20px;
+      border-radius: 17px;
+      border: 1px solid rgba(200, 166, 106, 0.28);
+      background: rgba(232, 209, 159, 0.13);
+    }
+
+    .booking-summary strong {
+      display: block;
+      color: #9b7941;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 7px;
+    }
+
+    .booking-summary p {
+      color: #56615a;
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .booking-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding-top: 4px;
+    }
+
+    .booking-actions .btn {
+      flex: 1 1 205px;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(20, 49, 38, 0.23);
+      color: var(--forest);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--forest);
+      background: rgba(25, 60, 47, 0.05);
+    }
+
+    .booking-status {
+      min-height: 1.45em;
+      color: #6f746d;
+      font-size: 0.76rem;
+      line-height: 1.55;
+    }
+
+    .booking-status.success {
+      color: #315e4c;
+    }
+
+    .booking-direct {
+      margin-top: 4px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 10px 20px;
+      flex-wrap: wrap;
+      color: #777b74;
+      font-size: 0.77rem;
+    }
+
+    .booking-direct a {
+      color: var(--forest);
+      font-weight: 800;
+    }
+
     /* ===================== ATMOSPHERE GALLERY ===================== */
 
     .gallery {
@@ -1594,8 +1803,13 @@
 
       .about-grid,
       .faq-grid,
-      .location-grid {
+      .location-grid,
+      .booking-grid {
         grid-template-columns: 1fr;
+      }
+
+      .booking-intro {
+        position: static;
       }
 
       .about-collage {
@@ -1842,6 +2056,20 @@
         padding: 33px 24px;
       }
 
+      .booking-card {
+        padding: 27px 20px;
+        border-radius: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-actions .btn {
+        width: 100%;
+        flex-basis: 100%;
+      }
+
       .location-actions .btn {
         width: 100%;
       }
@@ -1972,11 +2200,12 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#booking">Booking</a>
         <a href="#experience">Experience</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="nav-call" href="tel:+18329947999">Call Now</a>
+        <a class="nav-call" href="#booking">Book Now</a>
       </nav>
     </div>
   </header>
@@ -2016,18 +2245,19 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:+18329947999">
+            <a class="btn btn-primary" href="#booking">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 3v3M17 3v3M4.5 9h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                <path d="m9 14 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Book Appointment
+            </a>
+
+            <a class="btn btn-outline-light" href="tel:+18329947999">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5.2 3.8 8 3.2l2.1 5-2 1.7c1.2 2.4 3 4.2 5.4 5.4l1.7-2 5 2.1-.6 2.8c-.3 1.4-1.5 2.4-3 2.4C9.3 20.6 3.4 14.7 3.4 7.4c0-1.5 1-2.7 1.8-3.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Call Now
-            </a>
-
-            <a class="btn btn-outline-light" href="sms:+18329947999">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 5.5h14v10H9l-4 3v-13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-              </svg>
-              Text Us
             </a>
           </div>
         </div>
@@ -2047,7 +2277,7 @@
           </div>
           <div class="trust-item">
             <strong>Easy</strong>
-            <span>Call or text directly</span>
+            <span>Book online, call or text</span>
           </div>
         </div>
       </div>
@@ -2277,8 +2507,8 @@
               </ul>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Relaxation Head Spa - 45 minutes - $69">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
@@ -2330,8 +2560,8 @@
               </ul>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Relaxation Head Spa - 60 minutes - $79">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
@@ -2385,8 +2615,8 @@
               </ul>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Deluxe Head Spa - 60 minutes - $99">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
@@ -2440,8 +2670,8 @@
               </ul>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Deluxe Head Spa - 70 minutes - $109">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
@@ -2512,8 +2742,8 @@
               </div>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Deluxe Head Spa - 90 minutes - $129">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
@@ -2583,20 +2813,111 @@
               </div>
 
               <div class="service-card-actions">
+                <a class="btn btn-primary book-service" href="#booking" data-service="Deluxe Head Spa - 120 minutes - $189">Book Now</a>
                 <a class="btn btn-dark" href="tel:+18329947999">Call</a>
-                <a class="btn btn-primary" href="sms:+18329947999">Text</a>
               </div>
             </div>
           </article>
         </div>
 
         <p class="service-note">
-          Questions about a service? Call or text Sally Head Spa directly at
-          +1 832-994-7999.
+          Ready to visit? Choose a service above and select <strong>Book Now</strong> to prefill the appointment form,
+          or call/text Sally Head Spa directly at +1 832-994-7999.
         </p>
       </div>
     </section>
 
+
+    <!-- =====================================================
+         BOOKING
+         Static booking request form that prepares an SMS.
+         Appointments are confirmed only after Sally Head Spa replies.
+         ===================================================== -->
+    <section class="section booking" id="booking" aria-labelledby="bookingTitle">
+      <div class="container booking-grid">
+        <div class="booking-intro reveal">
+          <span class="eyebrow">Appointments</span>
+          <h2 class="section-title" id="bookingTitle">Request your preferred appointment.</h2>
+          <p class="section-copy">
+            Choose a service, date and preferred start time. When you submit, the site
+            prepares a text message to Sally Head Spa with your appointment details.
+          </p>
+
+          <div class="booking-note" role="note">
+            <strong>Booking request, not instant confirmation</strong>
+            <p>Your requested date and time are not reserved until Sally Head Spa replies and confirms availability.</p>
+            <p>Business hours shown on this site are 10:00 AM–7:00 PM. Available start times below automatically account for the selected service length.</p>
+          </div>
+        </div>
+
+        <div class="booking-card reveal">
+          <form class="booking-form" id="bookingForm" novalidate>
+            <div class="form-field">
+              <label for="bookingService">Service</label>
+              <select id="bookingService" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Relaxation Head Spa - 45 minutes - $69" data-duration="45">Relaxation Head Spa — 45 min — $69</option>
+                <option value="Relaxation Head Spa - 60 minutes - $79" data-duration="60">Relaxation Head Spa — 60 min — $79</option>
+                <option value="Deluxe Head Spa - 60 minutes - $99" data-duration="60">Deluxe Head Spa — 60 min — $99</option>
+                <option value="Deluxe Head Spa - 70 minutes - $109" data-duration="70">Deluxe Head Spa — 70 min — $109</option>
+                <option value="Deluxe Head Spa - 90 minutes - $129" data-duration="90">Deluxe Head Spa — 90 min — $129</option>
+                <option value="Deluxe Head Spa - 120 minutes - $189" data-duration="120">Deluxe Head Spa — 120 min — $189</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="bookingDate">Preferred date</label>
+                <input id="bookingDate" name="date" type="date" required />
+              </div>
+
+              <div class="form-field">
+                <label for="bookingTime">Preferred start time</label>
+                <select id="bookingTime" name="time" required disabled>
+                  <option value="">Select a service first</option>
+                </select>
+                <span class="field-hint">Times are requests only and depend on availability.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="bookingName">Your name</label>
+                <input id="bookingName" name="name" type="text" autocomplete="name" placeholder="Full name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="bookingPhone">Phone number</label>
+                <input id="bookingPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(832) 555-0123" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="bookingNotes">Notes <span style="text-transform:none; letter-spacing:0; font-weight:500; color:#92938c;">(optional)</span></label>
+              <textarea id="bookingNotes" name="notes" placeholder="Anything Sally Head Spa should know before confirming your appointment?"></textarea>
+            </div>
+
+            <div class="booking-summary" aria-live="polite">
+              <strong>Request summary</strong>
+              <p id="bookingSummary">Select a service, date and time to build your appointment request.</p>
+            </div>
+
+            <div class="booking-actions">
+              <button class="btn btn-primary" type="submit">Send Booking Request</button>
+              <button class="btn btn-ghost" type="button" id="copyBooking">Copy Request</button>
+            </div>
+
+            <p class="booking-status" id="bookingStatus" role="status" aria-live="polite"></p>
+
+            <div class="booking-direct">
+              <span>Prefer direct contact?</span>
+              <a href="tel:+18329947999">Call +1 832-994-7999</a>
+              <a href="sms:+18329947999">Text Sally Head Spa</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- =====================================================
          GALLERY
@@ -2661,21 +2982,21 @@
           <span class="eyebrow">Sally Head Spa · Katy</span>
 
           <h2 class="section-title">
-            Your quiet reset is only a call or text away.
+            Your quiet reset is ready when you are.
           </h2>
 
           <p>
-            Want to check availability or ask which experience fits the amount
-            of time you have? Contact Sally Head Spa directly.
+            Request your preferred appointment online, or contact Sally Head Spa directly
+            if you would like help choosing an experience.
           </p>
 
           <div class="contact-cta-actions">
-            <a class="btn btn-primary" href="tel:+18329947999">
-              Call +1 832-994-7999
+            <a class="btn btn-primary" href="#booking">
+              Book Appointment
             </a>
 
-            <a class="btn btn-outline-light" href="sms:+18329947999">
-              Send a Text
+            <a class="btn btn-outline-light" href="tel:+18329947999">
+              Call +1 832-994-7999
             </a>
           </div>
         </div>
@@ -2905,6 +3226,23 @@
 
           <article class="faq-item">
             <button class="faq-question" aria-expanded="false">
+              <span>Does submitting the booking form confirm my appointment?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq-answer">
+              <div>
+                <p>
+                  No. The form sends an appointment request with your preferred service,
+                  date and time. Your appointment is confirmed only after Sally Head Spa
+                  replies and confirms availability.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false">
               <span>Is there parking available?</span>
               <span class="faq-plus" aria-hidden="true"></span>
             </button>
@@ -2952,7 +3290,11 @@
           </div>
 
           <div class="location-actions">
-            <a class="btn btn-primary" href="tel:+18329947999">
+            <a class="btn btn-primary" href="#booking">
+              Book Appointment
+            </a>
+
+            <a class="btn btn-outline-light" href="tel:+18329947999">
               Call Now
             </a>
 
@@ -3006,6 +3348,7 @@
           <nav aria-label="Footer navigation">
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#booking">Booking</a>
             <a href="#experience">Experience</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Location</a>
@@ -3031,20 +3374,20 @@
     </div>
   </footer>
 
-  <!-- MOBILE DIRECT CONTACT BAR -->
-  <div class="mobile-contact-bar" aria-label="Quick contact">
-    <a class="mobile-call" href="tel:+18329947999">
+  <!-- MOBILE QUICK ACTION BAR -->
+  <div class="mobile-contact-bar" aria-label="Quick appointment actions">
+    <a class="mobile-call" href="#booking">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7 3v3M17 3v3M4.5 9h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+      Book Now
+    </a>
+
+    <a class="mobile-text" href="tel:+18329947999">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M5.2 3.8 8 3.2l2.1 5-2 1.7c1.2 2.4 3 4.2 5.4 5.4l1.7-2 5 2.1-.6 2.8c-.3 1.4-1.5 2.4-3 2.4C9.3 20.6 3.4 14.7 3.4 7.4c0-1.5 1-2.7 1.8-3.6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Call Now
-    </a>
-
-    <a class="mobile-text" href="sms:+18329947999">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M5 5.5h14v10H9l-4 3v-13Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      </svg>
-      Text Us
     </a>
   </div>
 
@@ -3237,6 +3580,184 @@
           }
         });
       });
+
+      /* ---------------- Booking request ---------------- */
+
+      const bookingForm = document.getElementById("bookingForm");
+      const bookingService = document.getElementById("bookingService");
+      const bookingDate = document.getElementById("bookingDate");
+      const bookingTime = document.getElementById("bookingTime");
+      const bookingName = document.getElementById("bookingName");
+      const bookingPhoneInput = document.getElementById("bookingPhone");
+      const bookingNotes = document.getElementById("bookingNotes");
+      const bookingSummary = document.getElementById("bookingSummary");
+      const bookingStatus = document.getElementById("bookingStatus");
+      const copyBooking = document.getElementById("copyBooking");
+      const bookingTextNumber = "+18329947999";
+
+      const toInputDate = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      };
+
+      const today = new Date();
+      const maxBookingDate = new Date(today);
+      maxBookingDate.setMonth(maxBookingDate.getMonth() + 6);
+      bookingDate.min = toInputDate(today);
+      bookingDate.max = toInputDate(maxBookingDate);
+
+      function minutesToTime(totalMinutes) {
+        const hour24 = Math.floor(totalMinutes / 60);
+        const minutes = totalMinutes % 60;
+        const suffix = hour24 >= 12 ? "PM" : "AM";
+        const hour12 = hour24 % 12 || 12;
+        return `${hour12}:${String(minutes).padStart(2, "0")} ${suffix}`;
+      }
+
+      function updateTimeOptions() {
+        const selected = bookingService.selectedOptions[0];
+        const duration = Number(selected?.dataset.duration || 0);
+        const previousValue = bookingTime.value;
+
+        bookingTime.innerHTML = "";
+
+        if (!duration) {
+          bookingTime.disabled = true;
+          bookingTime.add(new Option("Select a service first", ""));
+          updateBookingSummary();
+          return;
+        }
+
+        bookingTime.disabled = false;
+        bookingTime.add(new Option("Select a preferred time", ""));
+
+        const opening = 10 * 60;
+        const closing = 19 * 60;
+        const latestStart = closing - duration;
+
+        for (let minutes = opening; minutes <= latestStart; minutes += 30) {
+          const label = minutesToTime(minutes);
+          bookingTime.add(new Option(label, label));
+        }
+
+        if ([...bookingTime.options].some((option) => option.value === previousValue)) {
+          bookingTime.value = previousValue;
+        }
+
+        updateBookingSummary();
+      }
+
+      function displayDate(value) {
+        if (!value) return "";
+        const [year, month, day] = value.split("-").map(Number);
+        return new Intl.DateTimeFormat("en-US", {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+          year: "numeric"
+        }).format(new Date(year, month - 1, day));
+      }
+
+      function updateBookingSummary() {
+        const parts = [];
+        if (bookingService.value) parts.push(bookingService.value);
+        if (bookingDate.value) parts.push(displayDate(bookingDate.value));
+        if (bookingTime.value) parts.push(bookingTime.value);
+
+        bookingSummary.textContent = parts.length
+          ? parts.join(" • ")
+          : "Select a service, date and time to build your appointment request.";
+      }
+
+      function buildBookingMessage() {
+        const lines = [
+          "Hi Sally Head Spa, I'd like to request an appointment.",
+          "",
+          `Name: ${bookingName.value.trim()}`,
+          `Phone: ${bookingPhoneInput.value.trim()}`,
+          `Service: ${bookingService.value}`,
+          `Preferred date: ${displayDate(bookingDate.value)}`,
+          `Preferred time: ${bookingTime.value}`
+        ];
+
+        const notes = bookingNotes.value.trim();
+        if (notes) lines.push(`Notes: ${notes}`);
+
+        lines.push(
+          "",
+          "Please let me know if this time is available. I understand the appointment is not confirmed until I receive a reply. Thank you!"
+        );
+
+        return lines.join("\n");
+      }
+
+      function validateBooking() {
+        bookingStatus.classList.remove("success");
+
+        if (!bookingForm.checkValidity()) {
+          bookingForm.reportValidity();
+          bookingStatus.textContent = "Please complete the required fields before sending your request.";
+          return false;
+        }
+
+        return true;
+      }
+
+      bookingService.addEventListener("change", updateTimeOptions);
+      bookingDate.addEventListener("change", updateBookingSummary);
+      bookingTime.addEventListener("change", updateBookingSummary);
+
+      document.querySelectorAll(".book-service").forEach((link) => {
+        link.addEventListener("click", () => {
+          const requestedService = link.dataset.service;
+          if (requestedService) {
+            bookingService.value = requestedService;
+            updateTimeOptions();
+          }
+        });
+      });
+
+      bookingForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!validateBooking()) return;
+
+        const message = buildBookingMessage();
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const separator = isIOS ? "&" : "?";
+        const smsUrl = `sms:${bookingTextNumber}${separator}body=${encodeURIComponent(message)}`;
+
+        bookingStatus.textContent = "Opening your text-message app with the booking request. Send the message to request this appointment.";
+        bookingStatus.classList.add("success");
+        window.location.href = smsUrl;
+      });
+
+      copyBooking.addEventListener("click", async () => {
+        if (!validateBooking()) return;
+
+        const message = buildBookingMessage();
+
+        try {
+          await navigator.clipboard.writeText(message);
+          bookingStatus.textContent = "Booking request copied. You can paste it into a text message to +1 832-994-7999.";
+          bookingStatus.classList.add("success");
+        } catch (error) {
+          const temp = document.createElement("textarea");
+          temp.value = message;
+          temp.setAttribute("readonly", "");
+          temp.style.position = "fixed";
+          temp.style.opacity = "0";
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand("copy");
+          temp.remove();
+          bookingStatus.textContent = "Booking request copied. You can paste it into a text message to +1 832-994-7999.";
+          bookingStatus.classList.add("success");
+        }
+      });
+
+      updateTimeOptions();
 
       /* ---------------- Scroll reveal ---------------- */
 
